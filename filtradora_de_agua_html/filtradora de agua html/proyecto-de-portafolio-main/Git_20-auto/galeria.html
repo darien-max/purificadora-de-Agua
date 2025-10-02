@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./style3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <title>Galería del Invernadero</title>
+    <style>
+      mark {
+        background: rgb(211, 211, 185);
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="contenedor_cabecera">
+          <h1 id="titulo">Galería del proyecto "filtradora de agua"</h1>
+          <img class="logo" src="./img/Escudo-Inem-Transp.webp" alt="logo inem">
+      </div>
+      <div id="menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="./about.html">Acerca de</a></li>
+              <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
+              <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+            </ul>
+
+            <!-- Buscador -->
+            <form class="form-inline my-2 my-lg-0" onsubmit="return false;">
+              <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar en la página" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="buscar()">Buscar</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div id="contenedor_banner">
+          <p id="subtitulo">Filtradora de agua</p>
+      </div>
+    </header>
+
+    <div id="filtradora">
+        <p id="subtitulo2">Video del proceso</p>
+    </div>
+
+    <div id="video_filtradora">
+        <video class="fotos" width="400" controls>
+          <source src="./videos/VID-20250910-WA0025.mp4" type="video/mp4">
+          </video>
+    </div>
+
+    <div id="video_filtradora2">
+      <p id="subtitulo3">Componentes del Filtradora de agua</p>
+    </div>
+
+    <div id="contenedor_componentes">
+      <h1 id="titulo2">- cerebro</h1>
+      <img class="fotos_1" src="./img/1000027999.jpg" alt="acrilico">
+      <br>
+      <h1 id="titulo2">- contactor</h1>
+      <img class="fotos_2" src="./img/1000029784.jpg" alt="fuente de poder">
+      <br>
+      <h1 id="titulo2">- aplicacion</h1>
+      <img class="fotos_3" src="./img/1000028855.jpg" alt="llantas">
+      <br>
+      <h1 id="titulo2">- rele y modulo Bluetooth</h1>
+      <img class="fotos_4" src="./img/1000029781.jpg" alt="sensores">
+      <br>
+      <h1 id="titulo2">- Hidro bomba</h1>
+      <img class="fotos_5" src="./img/1000030694.jpg" alt="tubos pvc">
+    </div>
+
+    <!-- Buscador JS -->
+    <script>
+      function limpiarResaltado() {
+        document.querySelectorAll("mark").forEach(el => {
+          el.outerHTML = el.innerText; // quitar resaltado
+        });
+      }
+
+      function buscar() {
+        limpiarResaltado();
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        if (input.trim() === "") return;
+
+        // Resaltar coincidencias
+        let bodyHTML = document.body.innerHTML;
+        let regex = new RegExp("(" + input + ")", "gi");
+        document.body.innerHTML = bodyHTML.replace(regex, "<mark>$1</mark>");
+
+        // Diccionario de páginas
+        let paginas = {
+          "inicio": "index.html",
+          "acerca": "about.html",
+          "galeria": "galeria.html",
+          "contacto": "contacto.html",
+          "diseño": "diseño.html",
+          "programacion": "programasion.html",
+          "funcionalidad": "funsionalidad.html",
+          "materiales": "materiales.html",
+          "ambito": "ambito funcional.html"
+        };
+
+        // Redirigir si coincide
+        for (let key in paginas) {
+          if (input.includes(key)) {
+            window.location.href = paginas[key];
+            return;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

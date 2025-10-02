@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <title>Acerca del trabajo</title>
+    <style>
+      mark {
+        background: rgb(197, 197, 176);
+        font-weight: bold;
+      }
+
+      /* Caja de secciones */
+      .seccion {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 25px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #333;
+        text-align: justify;
+      }
+
+      /* Títulos */
+      .titulo-seccion {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin: 30px 0 15px 0;
+        color: #16a085;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+      }
+
+      /* Lista de problemas */
+      .lista-problemas {
+        margin-left: 20px;
+      }
+      .lista-problemas li {
+        margin: 8px 0;
+      }
+
+      /* Título principal */
+      #titulo {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #16a085;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        margin: 0 auto;
+      }
+
+      /* Banner */
+      #contenedor_banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("./img/banner.jpg") center center/cover no-repeat;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 12px;
+        height: 250px;
+        margin: 20px auto;
+        width: 80%;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        text-align: center;
+      }
+
+      #contenedor_banner p {
+        margin: 0;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 10px 20px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="contenedor_cabecera" class="text-center p-3">
+          <h1 id="titulo">Acerca del trabajo</h1>
+      </div>
+      <div id="menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="./about.html">Acerca de</a></li>
+              <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
+              <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+            </ul>
+
+            <!-- Buscador -->
+            <form class="form-inline my-2 my-lg-0" onsubmit="return false;">
+              <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Buscar en la página" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="buscar()">Buscar</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+            <!-- Banner con imagen corregido -->
+      <div id="contenedor_banner">
+          <p id="subtitulo">Filtrado de Agua </p>
+      </div>
+    </header>
+
+    <!-- resto de tu contenido igual -->
+  </body>
+</html>
+    </header>
+
+    <main>
+      <!-- Introducción -->
+      <h2 class="titulo-seccion">Acerca del proyecto "filtradora"</h2>
+      <div class="seccion">
+        <p>
+          <b>El proyecto seleccionado :</b> corresponde a una Filtradora de Agua. Este tiene como propósito aplicar principios básicos de electrónica y programación para crear un sistema capaz de mejorar la calidad del agua mediante procesos de filtración supervisados con sensores. 
+        </p>
+      </div>
+
+      <!-- ¿Qué es un Invernadero Automatizado? -->
+      <h2 class="titulo-seccion">1.	Diseño y conceptualización del sistema</h2>
+      <div class="seccion">
+        <p>
+          El sistema consiste en un Arduino UNO conectado a un módulo Bluetooth HC-05 que permite la comunicación inalámbrica con una aplicación móvil desarrollada en MIT App Inventor.
+El microcontrolador procesa las señales recibidas desde la aplicación y controla los actuadores (en este caso, un LED).
+<b>Sensores/Entradas: </b>.  
+          En este prototipo no se utilizan sensores, la entrada proviene de la aplicación móvil (botones ON/OFF).
+        </p>
+      </div>
+
+      <!-- Problemas y soluciones -->
+      <h2 class="titulo-seccion">Problemas que soluciona</h2>
+      <div class="seccion">
+        <ul class="lista-problemas">
+          <li><b>Optimización de condiciones ambientales:</b> •	La práctica permitió afianzar conocimientos sobre la configuración de pines analógicos, la visualización de datos en el monitor serial y la importancia de registrar las pruebas en tablas para validar los resultados.</li>
+          <li><b>Gestión eficiente de recursos:</b> •	Aunque se probó únicamente el modulo bluetooth, este avance representa un paso importante dentro del proyecto, ya que asegura que el sistema puede empezar a integrar mediciones reales que en fases posteriores se complementarán con otros sensores y con la comunicación Bluetooth.</li>
+
+          <li><b>Montage del proyecto</b> •	Finalmente, el montaje y las pruebas iniciales también ayudaron a identificar la necesidad de documentar todo el proceso con evidencias (fotos, capturas y repositorio en GitHub), lo cual fortalece la presentación técnica del proyecto y la claridad del trabajo colaborativo del grupo. </li>
+        </ul>
+      </div>
+
+      <!-- Énfasis -->
+      <h2 class="titulo-seccion">Énfasis en Mecatrónica</h2>
+      <div class="seccion text-center">
+        <p>
+          Este proyecto integra los principios de la <b>Mecatrónica</b>, 
+          combinando electrónica, programación y diseño mecánico para dar una solución práctica y educativa 
+          a un problema de relevancia mundial.
+        </p>
+      </div>
+    </main>
+
+    <!-- JavaScript para el buscador -->
+    <script>
+      function limpiarResaltado() {
+        document.querySelectorAll("mark").forEach(el => {
+          el.outerHTML = el.innerText;
+        });
+      }
+
+      function buscar() {
+        limpiarResaltado();
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        if (input.trim() === "") return;
+
+        // Resaltar coincidencias
+        const elementos = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6, li");
+        elementos.forEach(el => {
+          let texto = el.textContent;
+          let regex = new RegExp("(" + input + ")", "gi");
+          if (regex.test(texto)) {
+            el.innerHTML = texto.replace(regex, "<mark>$1</mark>");
+          }
+        });
+
+        // Diccionario de páginas
+        let paginas = {
+          "inicio": "index.html",
+          "acerca": "about.html",
+          "galeria": "galeria.html",
+          "contacto": "contacto.html",
+          "diseño": "diseño.html",
+          "programacion": "programasion.html",
+          "funcionalidad": "funsionalidad.html",
+          "materiales": "materiales.html",
+          "ambito": "ambito funcional.html"
+        };
+
+        for (let key in paginas) {
+          if (input.includes(key)) {
+            window.location.href = paginas[key];
+            return;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
